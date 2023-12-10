@@ -382,11 +382,6 @@ platform :ios do
   lane :unsigned do
     UI.success('Building unsigned iOS app')
 
-    ENV['APP_NAME'] = 'Mattermost'
-    ENV['REPLACE_ASSETS'] = 'true'
-    ENV['BUILD_FOR_RELEASE'] = 'true'
-    ENV['APP_SCHEME'] = 'mattermost'
-
     update_identifiers
     replace_assets
 
@@ -675,11 +670,6 @@ platform :ios do
     root_dir = Dir[File.expand_path('..')].first
     ios_build_dir = "#{root_dir}/ios/Build/Products"
 
-    ENV['APP_NAME'] = 'Mattermost'
-    ENV['REPLACE_ASSETS'] = 'true'
-    ENV['BUILD_FOR_RELEASE'] = 'true'
-    ENV['APP_SCHEME'] = 'mattermost'
-
     update_identifiers
     replace_assets
 
@@ -708,11 +698,6 @@ platform :android do
   desc 'Build an unsigned apk'
   lane :unsigned do
     UI.success('Building unsigned Android app')
-
-    ENV['APP_NAME'] = 'Mattermost'
-    ENV['REPLACE_ASSETS'] = 'true'
-    ENV['BUILD_FOR_RELEASE'] = 'true'
-    ENV['APP_SCHEME'] = 'mattermost'
 
     update_identifiers
     replace_assets
